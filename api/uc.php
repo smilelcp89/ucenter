@@ -139,7 +139,7 @@ class uc_note {
 		}
 
 		header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
-		_setcookie('Example_auth', _authcode($uid."\t".$username, 'ENCODE'));
+		_setcookie('lcplocal', _authcode($uid."\t".$username, 'ENCODE'));
 	}
 
 	function synlogout($get, $post) {
@@ -149,7 +149,7 @@ class uc_note {
 
 		//note 同步登出 API 接口
 		header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
-		_setcookie('Example_auth', '', -86400 * 365);
+		_setcookie('lcplocal', '', -86400 * 365);
 	}
 
 	function updatepw($get, $post) {
